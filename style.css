@@ -1,0 +1,110 @@
+@import url('./utility.css');
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+:root {
+  --primary-color: #3f51b5;
+  --light-color: #fff;
+  --grey-color-1: #e8e8e8;
+  --dark-color: #353535;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, serif;
+  background-color: var(--primary-color);
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  margin: 15px 0;
+}
+
+h3 {
+  margin: 10px 0 5px 0;
+}
+
+ul {
+  padding-left: 15px;
+  list-style-type: none;
+}
+
+li::before {
+  content: "—";
+  margin-right: 10px;
+}
+
+.inline-container {
+  display: inline-block;
+}
+
+.main-container {
+  max-width: 700px;
+  margin: 0 auto;
+  margin-top: 10px;
+  padding: 10px 40px 25px 40px;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 4px;
+  background-color: var(--grey-color-1);
+  box-shadow: 0 0 6px 2px rgba(0, 0, 0, .6);
+}
+
+.flex-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.frazione {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: fit-content;
+  margin: 10px 0;
+}
+
+.frazione .separatore {
+  width: 100%;
+  border-bottom: 1px solid black;
+}
+
+.frazione .numeratore {
+  display: flex;
+  flex-direction: column;
+}
+
+.frazione .numeratore::after {
+  content: "";
+  margin-top: 3px;
+  border-top: 1px solid black;
+}
+
+.frazione .denominatore {
+  margin-top: 3px;
+}
+
+.limite-container {
+  display: flex;
+  width: fit-content;
+}
+
+.limite {
+  display: flex;
+  width: fit-content;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: 3px;
+}
+
+.limite::before {
+  content: "lim"
+}
+
+.limite-tendenza {
+  font-size: 12px;
+}
