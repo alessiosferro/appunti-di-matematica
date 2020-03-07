@@ -16,6 +16,7 @@ body {
   margin: 0;
   font-family: "Noto Serif JP", serif;
   background-color: var(--very-dark-color);
+  overflow-y: scroll;
 }
 
 p {
@@ -180,4 +181,25 @@ a:visited {
 
 a:hover {
   color: blue;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--dark-color);
+}
+
+::-webkit-scrollbar-track:disabled {
+  background: var(--very-dark-color);
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: var(--grey-color-2);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--grey-color-3);
 }
