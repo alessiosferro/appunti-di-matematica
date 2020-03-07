@@ -1,3 +1,3 @@
-import handleDate from "./handle-date.js";
+import { handleDate } from "./handle-date.js";
 
 handleDate();
