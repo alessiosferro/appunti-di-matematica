@@ -134,6 +134,20 @@ li::before {
   font-size: 12px;
 }
 
+.footer-link--author {
+  display: inline-block;
+  background-color: var(--primary-darker-color);
+  padding: 0 5px;
+  text-decoration: none;
+  border-radius: 3px;
+  transition: all 200ms ease-in-out;
+}
+
+.footer-link--author:hover {
+  margin-left: 2px;
+  transform: rotate(7deg);
+}
+
 .footer-link:not(:last-child) {
   margin-right: 15px;
 }
@@ -158,16 +172,16 @@ li::before {
 }
 
 .main-section {
-  padding: 30px 35px;
+  padding: 25px 35px 50px 35px;
 
-  --header-height: 118.88px;
+  --header-height: 118px;
   --footer-height: 63px;
-  --section-padding: 60px;
+  --section-padding: 75px;
 
   min-height: calc(100% -
     var(--header-height) -
     var(--footer-height) -
-    var(--section-padding)
+    var(--section-padding) - 1px
   );
 
   background-color: var(--grey-color-2);

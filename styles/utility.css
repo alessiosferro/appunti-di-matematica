@@ -96,3 +96,7 @@
   top: -140px;
   left: 0;
 }
+
+.v-align-middle {
+  vertical-align: middle;
+}
