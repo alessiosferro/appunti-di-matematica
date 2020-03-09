@@ -86,3 +86,13 @@
 .p-0 {
   padding: 0 !important;
 }
+
+.bold {
+  font-weight: bold;
+}
+
+.custom-jump {
+  position: absolute;
+  top: -140px;
+  left: 0;
+}

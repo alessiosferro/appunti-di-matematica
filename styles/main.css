@@ -1,15 +1,17 @@
 @import url('./utility.css');
-@import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP:400,700&display=swap');
 
 :root {
-  --primary-color: #3f51b5;
-  --primary-darker-color: hsl(231, 48%, 44%);
+  --primary-color: #3949ab;
+  --primary-darker-color: hsl(232, 50%, 40%);
   --primary-dark-color: #002984;
   --grey-color-1: #e8e8e8;
   --grey-color-2: #d8d8d8;
   --grey-color-3: #aaa;
   --dark-color: #353535;
+  --dark-color--alpha: #353535aa;
   --very-dark-color: #1c1c1c;
+  --light-color: #fff;
 }
 
 body {
@@ -17,6 +19,15 @@ body {
   font-family: "Noto Serif JP", serif;
   background-color: var(--very-dark-color);
   overflow-y: scroll;
+}
+
+#indice-analitico {
+  position: absolute;
+  top: 0;
+}
+
+article {
+  position: relative;
 }
 
 p {
@@ -118,39 +129,53 @@ li::before {
   font-size: 12px;
 }
 
-.torna-in-cima:visited,
-.torna-in-cima:link {
-  color: var(--grey-color-1);
+.footer-link:not(:last-child) {
+  margin-right: 15px;
 }
 
-.torna-in-cima:hover {
+.footer-link:visited,
+.footer-link:link {
   color: var(--grey-color-2);
 }
 
+.footer-link:hover {
+  color: var(--light-color);
+}
 
 .main-header {
+  z-index: 100;
   position: relative;
   text-align: center;
-  border-top-right-radius: 200px;
-  border-top-left-radius: 200px;
+  transition: opacity 200ms ease-in-out;
   color: var(--grey-color-2);
   background-color: var(--primary-color);
+  border-bottom: 1px solid var(--dark-color);
   padding: 20px 10px;
 }
 
 .main-section {
-  padding: 20px 30px;
+  padding: 30px 35px;
   background-color: var(--grey-color-2);
   min-height: 400px;
 }
 
 .main-footer {
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
+  background-color: var(--primary-color);
   display: flex;
   padding: 20px;
   justify-content: space-between;
   color: var(--grey-color-2);
+  transition: opacity 200ms ease-in-out;
+}
+
+.main-footer--sticky {
+  opacity: .8;
+  position: sticky;
+  bottom: 0;
+}
+
+.main-footer:hover {
+  opacity: 1;
 }
 
 .back {

@@ -9,22 +9,23 @@
 </head>
 
 <body>
-  <main class="main-container">
+  <main class="main-container" id="top">
     <header class="main-header">
       <a class="back" href="../index.html">&larr;</a>
       <h1>Appunti di calcolo differenziale</h1>
     </header>
 
     <section class="main-section">
-      <nav id="indice-analitico">
-        <h2>Indice Analitico</h2>
+      <nav>
+        <h2 class="mt-0">Indice Analitico</h2>
         <ul>
           <li><a href="#rapporto-incrementale">Rapporto incrementale</a></li>
           <li><a href="#definizione-di-derivata">Definizione di derivata</a></li>
         </ul>
       </nav>
 
-      <article id="rapporto-incrementale">
+      <article>
+        <div class="custom-jump" id="rapporto-incrementale"></div>
         <h2>Rapporto Incrementale</h2>
         <h3>Ipotesi</h3>
         <ul>
@@ -53,7 +54,8 @@
         </div>
       </article>
 
-      <article id="definizione-di-derivata">
+      <article>
+        <div class="custom-jump" id="definizione-di-derivata"></div>
         <h2 class="mt-1 mb-3">Definizione di derivata</h2>
         <h3>Ipotesi</h3>
         <ul>
@@ -83,7 +85,7 @@
                 <span>f(x<sub>0</sub> + h) - f(x<sub>0</sub>)</span>
               </div>
               <div class="denominatore">
-                <span>x - x<sub>0</sub></span>
+                <span>h</span>
               </div>
             </div>
           </div>
@@ -91,9 +93,12 @@
       </article>
     </section>
 
-    <footer class="main-footer">
+    <footer class="main-footer main-footer--sticky">
       <p id="date"></p>
-      <a class="torna-in-cima" href="#indice-analitico">Torna in cima</a>
+      <div>
+        <a class="footer-link" href="../index.html">Torna alla home</a>
+        <a class="footer-link" href="#top">Torna in cima</a>
+      </div>
     </footer>
   </main>
 
