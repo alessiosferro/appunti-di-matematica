@@ -15,6 +15,7 @@
 }
 
 body {
+  height: 100vh;
   margin: 0;
   font-family: "Noto Serif JP", serif;
   background-color: var(--very-dark-color);
@@ -44,6 +45,10 @@ h2 {
   border-bottom: 1px solid var(--grey-color-3);
 }
 
+h2:first-child {
+  margin-top: 0;
+}
+
 h3 {
   margin: 10px 0 5px 0;
 }
@@ -64,10 +69,10 @@ li::before {
 
 .main-container {
   max-width: 800px;
-  margin: 25px auto;
+  height: 100%;
+  margin: 0 auto;
   align-items: center;
   flex-direction: column;
-  border-radius: 4px;
   background-color: var(--primary-color);
   box-shadow: 0 0 6px 3px var(--dark-color);
 }
@@ -149,14 +154,23 @@ li::before {
   transition: opacity 200ms ease-in-out;
   color: var(--grey-color-2);
   background-color: var(--primary-color);
-  border-bottom: 1px solid var(--dark-color);
-  padding: 20px 10px;
+  padding: 15px 10px;
 }
 
 .main-section {
   padding: 30px 35px;
+
+  --header-height: 118.88px;
+  --footer-height: 63px;
+  --section-padding: 60px;
+
+  min-height: calc(100% -
+    var(--header-height) -
+    var(--footer-height) -
+    var(--section-padding)
+  );
+
   background-color: var(--grey-color-2);
-  min-height: 400px;
 }
 
 .main-footer {
@@ -181,9 +195,18 @@ li::before {
 .back {
   text-decoration: none;
   position: absolute;
-  left: 0;
-  top: 0;
-  transform: translate(100%, 100%);
+  left: 30px;
+
+  --back-box-height: 46px;
+  --main-header-padding: 15px;
+  --h1-margin: 21px;
+
+  top: calc(100% - 
+    var(--back-box-height) - 
+    var(--main-header-padding) - 
+    var(--h1-margin)
+  );
+
   padding: 0 5px;
   border-radius: 4px;
   font-size: 32px;
