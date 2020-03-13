@@ -193,11 +193,9 @@ li::before {
   padding: 20px;
   justify-content: space-between;
   color: var(--grey-color-2);
-  transition: opacity 200ms ease-in-out;
 }
 
 .main-footer--sticky {
-  opacity: .8;
   position: sticky;
   bottom: 0;
 }
